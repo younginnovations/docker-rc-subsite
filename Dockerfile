@@ -27,6 +27,7 @@ RUN ln -s /etc/php5/mods-available/mcrypt.ini /etc/php5/cli/conf.d/20-mcrypt.ini
 WORKDIR /var/www/html/
 RUN git clone https://github.com/younginnovations/resourcecontracts-rc-subsite site
 
+ADD conf/.htaccess /var/www/html/site/.htaccess
 ADD conf/.env /var/www/html/site/.env
 WORKDIR /var/www/html/site
 RUN chmod -R 777 /var/www/html/site/storage
