@@ -18,7 +18,7 @@ RUN apt-get install -y \
                     php5-pgsql \                    
                     php5-readline 
 
-ADD apache_default /etc/apache2/sites-available/000-default.conf
+ADD conf/apache_default /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
 RUN a2enmod php5
 RUN ln -s /etc/php5/mods-available/mcrypt.ini /etc/php5/apache2/conf.d/20-mcrypt.ini
@@ -29,6 +29,8 @@ RUN git clone https://github.com/younginnovations/resourcecontracts-rc-subsite s
 
 ADD conf/.env /var/www/html/site/.env
 WORKDIR /var/www/html/site
+RUN chmod -R 777 /var/www/html/site/storage
+
 RUN curl -s http://getcomposer.org/installer | php
 RUN php composer.phar install --prefer-source
 RUN php composer.phar dump-autoload --optimize
