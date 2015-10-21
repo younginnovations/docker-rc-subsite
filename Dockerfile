@@ -15,6 +15,7 @@ RUN apt-get install -y \
                     php5-cli \
                     php5-curl \
                     php5-mcrypt \
+                    php5-pgsql \                    
                     php5-readline 
 
 RUN a2enmod rewrite

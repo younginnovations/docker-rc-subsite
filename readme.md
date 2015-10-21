@@ -14,7 +14,7 @@ This repository contains the Dockerfile of [ResouceContracts subsites](https://g
 4. Copy `conf/.env.example` to `conf/.env` with configurations
     For olc subsite, write category=olc in .env, category=rc for rc subsites
     You need database configuration as well to save the static content pages
-5. Build an image from Dockerfile `docker build -t=subsite`
+5. Build an image from Dockerfile `docker build -t=subsite .`
 
 ### Usage
 
