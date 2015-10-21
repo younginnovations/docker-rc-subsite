@@ -19,7 +19,7 @@ This repository contains the Dockerfile of [ResouceContracts subsites](https://g
 ### Usage
 
 * Run `docker run -p 80:80 -d subsite`
-* Access the system from the browser at http://xxx/subsite/public/index.php
+* Access the system from the browser at http://xxx/site/public/
 
 ### TODO
 
